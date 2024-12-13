@@ -79,11 +79,11 @@ if (myScore > theirScore) {
     System.out.println("It's a draw.");
 }
 
-
     }
-
-
-
+    public static void main(String[] args) {
+        SixthChitnisAryana game = new SixthChitnisAryana();
+        game.newGame();
+    }
 
 
 
