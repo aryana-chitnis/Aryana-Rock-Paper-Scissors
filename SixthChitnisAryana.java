@@ -1,13 +1,13 @@
-// Java implementation of a Rock-Paper-Scissors game
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 
 public class SixthChitnisAryana {
-    private List<String> myMoves; // List to store your moves
-    private List<String> theirMoves; // List to store opponent's moves
-    private int myScore; // Your score
+    private List<String> myMoves; 
+    private List<String> theirMoves; 
+    private int myScore; 
     private int theirScore; 
 
     public SixthChitnisAryana() {
@@ -24,7 +24,6 @@ public class SixthChitnisAryana {
         String myMove = possibleMoves[random.nextInt(possibleMoves.length)];
 
 
-        // Add your move to the history
         myMoves.add(myMove);
         return myMove;
     }
@@ -34,7 +33,7 @@ public class SixthChitnisAryana {
         theirMoves.add(theirMove);
 
 
-        // Determine the result of the round
+       
         if (myMove.equals(theirMove)) {
             System.out.println("It's a draw. Both of you did " + myMove);
         } else if (
@@ -53,7 +52,7 @@ public class SixthChitnisAryana {
     }
 
     public void newGame() {
-        // Number of rounds (random between 100 and 500)
+       
         Random randomNum = new Random();
         int rounds = randomNum.nextInt(401) + 100;
 
@@ -65,7 +64,27 @@ public class SixthChitnisAryana {
             
             String[] moves = {"Rock", "Paper", "Scissors"};
             String theirMove = moves[randomNum.nextInt(moves.length)];
+            playRound(theirMove);
+}
+System.out.println("Game over!");
+System.out.println("Your final score: " + myScore);
+System.out.println("Opponent's final score: " + theirScore);
+
+
+if (myScore > theirScore) {
+    System.out.println("Yayyyyy you won!!!!");
+} else if (myScore < theirScore) {
+    System.out.println("Awwwww sorry but you lost.");
+} else {
+    System.out.println("It's a draw.");
 }
 
+
     }
+
+
+
+
+
+
 }
