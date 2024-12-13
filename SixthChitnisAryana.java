@@ -52,22 +52,20 @@ public class SixthChitnisAryana {
         }
     }
 
+    public void newGame() {
+        // Number of rounds (random between 100 and 500)
+        Random randomNum = new Random();
+        int rounds = randomNum.nextInt(401) + 100;
 
 
+        System.out.println("This game has " + rounds + " rounds!");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for (int i = 0; i < rounds; i++) {
+            
+            String[] moves = {"Rock", "Paper", "Scissors"};
+            String theirMove = moves[randomNum.nextInt(moves.length)];
 }
 
+    }
+}
