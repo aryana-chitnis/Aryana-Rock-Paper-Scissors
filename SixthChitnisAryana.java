@@ -29,6 +29,29 @@ public class SixthChitnisAryana {
         return myMove;
     }
 
+    public void playRound(String theirMove) {
+        String myMove = playingMoves();
+        theirMoves.add(theirMove);
+
+
+        // Determine the result of the round
+        if (myMove.equals(theirMove)) {
+            System.out.println("It's a draw. Both of you did " + myMove);
+        } else if (
+            (myMove.equals("Rock") && theirMove.equals("Scissors")) ||
+            (myMove.equals("Paper") && theirMove.equals("Rock")) ||
+            (myMove.equals("Scissors") && theirMove.equals("Paper"))
+        ) {
+            System.out.println("Yayyyyy you won this round!!! Your Score: " + myMove + ", Opponent's Score: " + theirMove);
+            myScore += 1;
+            theirScore -= 1;
+        } else {
+            System.out.println("Awwwwww you lost this round :( Your Score: " + myMove + ", Opponent's Score: " + theirMove);
+            myScore -= 1;
+            theirScore += 1;
+        }
+    }
+
 
 
 
