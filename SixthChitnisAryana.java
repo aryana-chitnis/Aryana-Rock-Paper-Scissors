@@ -21,7 +21,6 @@ public class SixthChitnisAryana {
     public String playingMoves() {
     
         String[] possibleMoves = {"Rock", "Paper", "Scissors"};
-        Random random = new Random();
         String myMove = possibleMoves[0];
 
 
