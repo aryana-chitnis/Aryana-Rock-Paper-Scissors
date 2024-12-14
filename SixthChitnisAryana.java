@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+// in this program, the opponent's moves are randomized, but my move is to simply play rock everytime
 
 public class SixthChitnisAryana {
     private List<String> myMoves; 
@@ -21,7 +22,7 @@ public class SixthChitnisAryana {
     
         String[] possibleMoves = {"Rock", "Paper", "Scissors"};
         Random random = new Random();
-        String myMove = possibleMoves[random.nextInt(possibleMoves.length)];
+        String myMove = possibleMoves[0];
 
 
         myMoves.add(myMove);
@@ -41,11 +42,11 @@ public class SixthChitnisAryana {
             (myMove.equals("Paper") && theirMove.equals("Rock")) ||
             (myMove.equals("Scissors") && theirMove.equals("Paper"))
         ) {
-            System.out.println("Yayyyyy you won this round!!! Your Score: " + myMove + ", Opponent's Score: " + theirMove);
+            System.out.println("Yayyyyy you won this round!!! Your Move: " + myMove + ", Opponent's Move " + theirMove + "\n" + "Your Score: " + myScore + ", Opponent's Score: " + theirScore);
             myScore += 1;
             theirScore -= 1;
         } else {
-            System.out.println("Awwwwww you lost this round :( Your Score: " + myMove + ", Opponent's Score: " + theirMove);
+            System.out.println("Awwwwww you lost this round :( Your Move: " + myMove + ", Opponent's Move: " + theirMove + "\n" + "Your Score: " + myScore + ", Opponent's Score " + theirScore);
             myScore -= 1;
             theirScore += 1;
         }
